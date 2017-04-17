@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NPI</string>
+    <string name="button_enter">Entrar</string>
+    <string name="button_enter_f_text">Entrar</string>
+    <string name="button_backspace_f_text">Brx</string>
+    <string name="button_backspace">RETRO</string>
+    <string name="button_clear">B</string>
+    <string name="button_clear_all_f_text">B</string>
+</resources>

@@ -1,0 +1,32 @@
+<resources>
+    <style name="AppThemeMaterial" parent="android:Theme.Material">
+        <item name="android:colorAccent">@color/MaterialAccent</item>
+        <item name="android:colorBackground">@color/MaterialBackground</item>
+        <item name="android:colorForeground">@color/MaterialForeground</item>
+        <item name="android:colorPrimary">@color/MaterialPrimary</item>
+        <item name="android:colorPrimaryDark">@color/MaterialPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/MaterialNavigationBar</item>
+        <item name="android:statusBarColor">@color/MaterialStatusBar</item>
+        <item name="android:textColorHint">@color/MaterialTextHint</item>
+        <item name="android:textColorPrimary">@color/MaterialTextPrimary</item>
+        <item name="android:textColorPrimaryInverse">@color/MaterialTextPrimaryInverse</item>
+        <item name="android:textColorSecondary">@color/MaterialTextSecondary</item>
+        <item name="android:textColorSecondaryInverse">@color/MaterialTextSecondaryInverse</item>
+        <item name="android:windowBackground">@color/MaterialWindowBackground</item>
+    </style>
+    <style name="AppThemeCompat" parent="Theme.AppCompat">
+        <item name="android:colorAccent">@color/CompatAccent</item>
+        <item name="android:colorBackground">@color/CompatBackground</item>
+        <item name="android:colorForeground">@color/CompatForeground</item>
+        <item name="android:colorPrimary">@color/CompatPrimary</item>
+        <item name="android:colorPrimaryDark">@color/CompatPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/CompatNavigationBar</item>
+        <item name="android:statusBarColor">@color/CompatStatusBar</item>
+        <item name="android:textColorHint">@color/CompatTextHint</item>
+        <item name="android:textColorPrimary">@color/CompatTextPrimary</item>
+        <item name="android:textColorPrimaryInverse">@color/CompatTextPrimaryInverse</item>
+        <item name="android:textColorSecondary">@color/CompatTextSecondary</item>
+        <item name="android:textColorSecondaryInverse">@color/CompatTextSecondaryInverse</item>
+        <item name="android:windowBackground">@color/CompatWindowBackground</item>
+    </style>
+</resources>

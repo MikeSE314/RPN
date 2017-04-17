@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">RPN</string>
+    <string name="display_default" translatable="false">0</string>
+    <string name="display_y_prime" translatable="false">Y:</string>
+    <string name="display_z_prime" translatable="false">Z:</string>
+    <string name="display_t_prime" translatable="false">T:</string>
+    <string name="button_0" translatable="false">0</string>
+    <string name="button_1" translatable="false">1</string>
+    <string name="button_2" translatable="false">2</string>
+    <string name="button_3" translatable="false">3</string>
+    <string name="button_4" translatable="false">4</string>
+    <string name="button_5" translatable="false">5</string>
+    <string name="button_6" translatable="false">6</string>
+    <string name="button_7" translatable="false">7</string>
+    <string name="button_8" translatable="false">8</string>
+    <string name="button_9" translatable="false">9</string>
+    <string name="button_enter">Enter</string>
+    <string name="button_add" translatable="false">+</string>
+    <string name="button_subtract" translatable="false">—</string>
+    <string name="button_negative" translatable="false">(-)</string>
+    <string name="button_multiply" translatable="false">*</string>
+    <string name="button_divide" translatable="false">/</string>
+    <string name="button_decimal" translatable="false">.</string>
+    <string name="button_clear">C</string>
+    <string name="button_backspace">DEL</string>
+    <string name="button_swap" translatable="false">X⇄Y</string>
+    <!--strings for the special function (f) buttons-->
+    <string name="button_0_f_text" translatable="false"> </string>
+    <string name="button_1_f_text" translatable="false"> </string>
+    <string name="button_2_f_text" translatable="false"> </string>
+    <string name="button_3_f_text" translatable="false"> </string>
+    <string name="button_4_f_text" translatable="false"> </string>
+    <string name="button_5_f_text" translatable="false"> </string>
+    <string name="button_6_f_text" translatable="false"> </string>
+    <string name="button_7_f_text" translatable="false"> </string>
+    <string name="button_8_f_text" translatable="false"> </string>
+    <string name="button_9_f_text" translatable="false"> </string>
+    <string name="button_enter_f_text"> </string>
+    <string name="button_plus_f_text" translatable="false"> </string>
+    <string name="button_minus_f_text" translatable="false"> </string>
+    <string name="button_neg_f_text" translatable="false"> </string>
+    <string name="button_mult_f_text" translatable="false">Y^X</string>
+    <string name="button_div_f_text" translatable="false"> </string>
+    <string name="button_decimal_f_text" translatable="false"> </string>
+    <string name="button_clear_all_f_text"> </string>
+    <string name="button_backspace_f_text">Clx</string>
+    <string name="button_swap_xy_f_text" translatable="false">X←Y</string>
+</resources>

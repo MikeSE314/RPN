@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="MaterialAccent">#b39ddb</color>
+    <color name="MaterialAccentDark">#7e57c2</color>
+    <color name="MaterialAccentLight">#e1bee7</color>
+    <color name="MaterialBackground">#eeeeee</color>
+    <color name="MaterialForeground">#455a64</color>
+    <color name="MaterialNavigationBar">#424242</color>
+    <color name="MaterialPrimary">#78909c</color>
+    <color name="MaterialPrimaryDark">#455a64</color>
+    <color name="MaterialPrimaryLight">@color/material_grey_800</color>
+    <color name="MaterialStatusBar">#757575</color>
+    <color name="MaterialTextHint">#61000000</color>
+    <color name="MaterialTextPrimary">#de000000</color>
+    <color name="MaterialTextPrimaryInverse">#ffffff</color>
+    <color name="MaterialTextSecondary">#8a000000</color>
+    <color name="MaterialTextSecondaryInverse">#ddffffff</color>
+    <color name="MaterialWindowBackground">#eeeeee</color>
+
+    <color name="CompatAccent">#40C4FF</color>
+    <color name="CompatAccentDark">#00B0FF</color>
+    <color name="CompatAccentLight">#80D8FF</color>
+    <color name="CompatBackground">#eeeeee</color>
+    <color name="CompatForeground">#455a64</color>
+    <color name="CompatNavigationBar">#424242</color>
+    <color name="CompatPrimary">#78909c</color>
+    <color name="CompatPrimaryDark">#455a64</color>
+    <color name="CompatPrimaryLight">@color/material_grey_800</color>
+    <color name="CompatStatusBar">#757575</color>
+    <color name="CompatTextHint">#61000000</color>
+    <color name="CompatTextPrimary">#de000000</color>
+    <color name="CompatTextPrimaryInverse">#ffffff</color>
+    <color name="CompatTextSecondary">#8a000000</color>
+    <color name="CompatTextSecondaryInverse">#ddffffff</color>
+    <color name="CompatWindowBackground">#eeeeee</color>
+</resources>

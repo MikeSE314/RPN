@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    style="@style/AppThemeMaterial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:theme="@style/AppThemeCompat"
+    tools:context="com.example.micheal.rpn.MainActivity">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/display_main"
+        style="@style/AppThemeMaterial"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_heightPercent="30%"
+        app:layout_widthPercent="100%">
+
+        <TextView
+            android:id="@+id/x_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/display_default"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="24sp"
+            android:typeface="sans"
+            app:layout_heightPercent="100%"
+            app:layout_widthPercent="60%" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/disp_stack"
+            style="@style/AppThemeMaterial"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_toEndOf="@+id/x_text"
+            android:orientation="vertical"
+            app:layout_heightPercent="100%"
+            app:layout_widthPercent="40%">
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/disp_t"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_heightPercent="33%"
+                app:layout_widthPercent="100%">
+
+                <TextView
+                    android:id="@+id/t_prime"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="@string/display_t_prime"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="24sp"
+                    android:typeface="sans"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="20%" />
+
+                <TextView
+                    android:id="@+id/t_text"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_toEndOf="@+id/t_prime"
+                    android:text="@string/display_default"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="24sp"
+                    android:typeface="sans"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="80%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/disp_z"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/disp_t"
+                android:orientation="horizontal"
+                app:layout_heightPercent="33%"
+                app:layout_widthPercent="100%">
+
+                <TextView
+                    android:id="@+id/z_prime"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="@string/display_z_prime"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="24sp"
+                    android:typeface="sans"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="20%" />
+
+                <TextView
+                    android:id="@+id/z_text"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_toEndOf="@+id/z_prime"
+                    android:text="@string/display_default"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="24sp"
+                    android:typeface="sans"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="80%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/disp_y"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/disp_z"
+                android:orientation="horizontal"
+                app:layout_heightPercent="34%"
+                app:layout_widthPercent="100%">
+
+                <TextView
+                    android:id="@+id/y_prime"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="@string/display_y_prime"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="24sp"
+                    android:typeface="sans"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="20%" />
+
+                <TextView
+                    android:id="@+id/y_text"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_toEndOf="@+id/y_prime"
+                    android:text="@string/display_default"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="24sp"
+                    android:typeface="sans"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="80%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+        </android.support.percent.PercentRelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/all_buttons"
+        style="@style/AppThemeMaterial"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/display_main"
+        android:background="?android:attr/colorPrimary"
+        app:layout_heightPercent="100%"
+        app:layout_widthPercent="100%">
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/numbers_buttons"
+            style="@style/AppThemeMaterial"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal"
+            app:layout_heightPercent="80%"
+            app:layout_widthPercent="75%">
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_7"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.3%">
+
+                <TextView
+                    android:id="@+id/f_text_7"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_7_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/main_text_7"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/f_text_7"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_7"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_8"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_toEndOf="@+id/button_7"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.3%">
+
+                <TextView
+                    android:id="@+id/f_text_8"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_8_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/main_text_8"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/f_text_8"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_8"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_9"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_toEndOf="@+id/button_8"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.4%">
+
+                <TextView
+                    android:id="@+id/f_text_9"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_9_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/main_text_9"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/f_text_9"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_9"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_4"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_7"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.3%">
+
+                <TextView
+                    android:id="@+id/f_text_4"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_4_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/main_text_4"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/f_text_4"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_4"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_5"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_8"
+                android:layout_toEndOf="@+id/button_4"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.3%">
+
+                <TextView
+                    android:id="@+id/f_text_5"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_5_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/main_text_5"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/f_text_5"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_5"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_6"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_9"
+                android:layout_toEndOf="@+id/button_5"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.4%">
+
+                <TextView
+                    android:id="@+id/f_text_6"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_6_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/main_text_6"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/f_text_6"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_6"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_1"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_4"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.3%">
+
+                <TextView
+                    android:id="@+id/f_text_1"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_1_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/main_text_1"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/f_text_1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_1"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_2"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_5"
+                android:layout_toEndOf="@+id/button_1"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.3%">
+
+                <TextView
+                    android:id="@+id/f_text_2"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_2_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/main_text_2"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/f_text_2"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_2"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_3"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_6"
+                android:layout_toEndOf="@+id/button_2"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.4%">
+
+                <TextView
+                    android:id="@+id/f_text_3"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_3_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/main_text_3"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/f_text_3"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_3"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_0"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_1"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.3%">
+
+                <TextView
+                    android:id="@+id/f_text_0"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_0_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/main_text_0"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/f_text_0"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_0"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_decimal"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_2"
+                android:layout_toEndOf="@+id/button_0"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.3%">
+
+                <TextView
+                    android:id="@+id/decimal_f_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_decimal_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/decimal_main_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/decimal_f_text"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_decimal"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_enter"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_3"
+                android:layout_toEndOf="@+id/button_decimal"
+                app:layout_heightPercent="25%"
+                app:layout_widthPercent="33.4%">
+
+                <TextView
+                    android:id="@+id/enter_f_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_enter_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/enter_main_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/enter_f_text"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_enter"
+                    android:textStyle="bold"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/operations_buttons"
+            style="@style/AppThemeMaterial"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_toEndOf="@+id/numbers_buttons"
+            android:background="?android:attr/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            app:layout_heightPercent="100%"
+            app:layout_widthPercent="25%">
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_backspace"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_heightPercent="20%"
+                app:layout_widthPercent="100%">
+
+                <TextView
+                    android:id="@+id/backspace_f_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_backspace_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/backspace_main_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/backspace_f_text"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_backspace"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_divide"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_backspace"
+                app:layout_heightPercent="20%"
+                app:layout_widthPercent="100%">
+
+                <TextView
+                    android:id="@+id/divide_f_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_div_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/divide_main_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/divide_f_text"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_divide"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_multiply"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_divide"
+                app:layout_heightPercent="20%"
+                app:layout_widthPercent="100%">
+
+                <TextView
+                    android:id="@+id/multiply_f_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_mult_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/multiply_main_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/multiply_f_text"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_multiply"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_subtract"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_multiply"
+                app:layout_heightPercent="20%"
+                app:layout_widthPercent="100%">
+
+                <TextView
+                    android:id="@+id/subtract_f_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_minus_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/subtract_main_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/subtract_f_text"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_subtract"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_add"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_below="@+id/button_subtract"
+                app:layout_heightPercent="20%"
+                app:layout_widthPercent="100%">
+
+                <TextView
+                    android:id="@+id/add_f_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_plus_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/add_main_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/add_f_text"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_add"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/bottom_buttons"
+            style="@style/AppThemeMaterial"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/numbers_buttons"
+            android:background="?android:attr/colorAccent"
+            android:gravity="center_horizontal"
+            app:layout_heightPercent="20%"
+            app:layout_widthPercent="75%">
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_clear"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="33.3%">
+
+                <TextView
+                    android:id="@+id/clear_f_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_clear_all_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/clear_main_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/clear_f_text"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_clear"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_swap"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_toEndOf="@+id/button_clear"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="33.3%">
+
+                <TextView
+                    android:id="@+id/swap_f_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_swap_xy_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/swap_main_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/swap_f_text"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_swap"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/button_negative"
+                style="@style/AppThemeMaterial"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_toEndOf="@+id/button_swap"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="33.4%">
+
+                <TextView
+                    android:id="@+id/negative_f_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_neg_f_text"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:id="@+id/negative_main_text"
+                    style="@style/AppThemeMaterial"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/negative_f_text"
+                    android:gravity="center_horizontal"
+                    android:text="@string/button_negative"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+        </android.support.percent.PercentRelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentRelativeLayout>

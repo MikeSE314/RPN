@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RPN</string>
+    <string name="button_backspace_f_text">Alisx</string>
+    <string name="button_backspace">BALIK</string>
+    <string name="button_clear">C</string>
+    <string name="button_clear_all_f_text">C</string>
+    <string name="button_enter">Ipasok</string>
+    <string name="button_enter_f_text">Ipasok</string>
+</resources>
